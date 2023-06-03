@@ -37,7 +37,7 @@
                   <div class="card-3d-wrap mx-auto">
                     <div class="card-3d-wrapper">
                       <div class="card-front">
-                        <form class="front-log" action="login.php" method="post">
+                        <form class="front-log" action="login.php" method="POST">
                           <div class="center-wrap">
                             <div class="section text-center">
                               <h4 class="mb-4 pb-3">Log In</h4>
