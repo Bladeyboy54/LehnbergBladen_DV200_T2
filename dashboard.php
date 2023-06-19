@@ -1,26 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta   charset="UTF-8">
-    <meta   http-equiv="X-UA-Compatible" 
-            content="IE=edge">
-    <meta   name="viewport" 
-            content="width=device-width, initial-scale=1.0">
-    <meta   studentName="Bladen Lehnberg"
-            studentNumber="221146"
-            class="DV200_T2"
-            lecturer="Tsungai Katsuro">
-    <link   rel="stylesheet" 
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link   rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
-    <link   rel="stylesheet"
-            href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" 
+        content="IE=edge">
+  <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+  <meta studentName="Bladen Lehnberg"
+        studentNumber="221146"
+        class="DV200_T2"
+        lecturer="Tsungai Katsuro">
+  <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+  <link rel="stylesheet"
+        href="dashboard.css">
 
-    <title>Document</title>
+  <title>Document</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Dashboard</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="vertical-nav">
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link active" href="#">Appointments</a>
+            <a class="nav-link" href="#">Patients</a>
+            <a class="nav-link" href="#">Doctors</a>
+            <a class="nav-link" href="#">Receptionists</a>
+          </nav>
+          <div class="logo">
+            <img src="Img/61ae-mRACmL._SL1500_-PhotoRoom 2.png" alt="logo">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10">
+          <h1>Appointments</h1>
+        <div class="calendar">
+          <div id="calendar"></div>
+        </div>
+        <div class="add-appointment">
+          <button class="add-button" onclick="toggleForm()">+</button>
+          <div id="form-container" class="form-container">
+            <form action="process.php" method="POST">
+              <input type="text" name="title" placeholder="Title">
+              <input type="text" name="date" placeholder="Date">
+              <input type="text" name="time" placeholder="Time">
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+        <script src="calendar.js"></script>
+      </div>
+    </div>
   </div>
+  <script>
+    function toggleForm() {
+      var formContainer = document.getElementById('form-container');
+      formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
