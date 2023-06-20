@@ -6,111 +6,118 @@ body{
 	font-size: 15px;
 	line-height: 1.7;
 	color: #c4c3ca;
-    background-image: url("Img/DV200_T2 Mountains.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("Img/DV200_T2 Mountains.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 	overflow-x: hidden;
 }
 
 h1 {
-    color: #FFEBA7;
-    font-weight: 800;
-    margin-top: 10px;
-    max-width: 1200px;
-    padding-left: 20px;
+  color: #FFEBA7;
+  font-weight: 800;
+  margin-top: 10px;
+  max-width: 1200px;
+  padding-left: 20px;
 }
 .vertical-nav {
-    width: 100%;
-    background-color: #FFEBA7;
-    color: #fff;
-    height: 100vh;
-    padding-top: 20px;
-    font-size: 20px;
-    font-weight: 800;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .vertical-nav .nav-link {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 8px 16px;
-    color: #2A2B38;
-    background-color: #FFEBA7;
-    border-radius: 30px;
-  }
-
-  .vertical-nav .nav-link:hover {
-    background-color: rgba(42, 43, 56, 0.5);
-    color: #FFEBA7;
-    border-radius: 30px; 
-  }
-  
-  .vertical-nav .nav-link.active {
-    background-color: #2A2B38;
-    color: #FFEBA7;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    border-radius: 30px;
-  }
-
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 20px;
-  }
-
-  .logo img {
-	height: 150px;
-	width: auto;
-	display: block;
+  width: 100%;
+  background-color: #FFEBA7;
+  color: #fff;
+  height: 100vh;
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* calendar.css */
+.vertical-nav .nav-link {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  color: #2A2B38;
+  background-color: #FFEBA7;
+  border-radius: 30px;
+}
+
+.vertical-nav .nav-link:hover {
+  background-color: rgba(42, 43, 56, 0.5);
+  color: #FFEBA7;
+  border-radius: 30px; 
+}
+
+.vertical-nav .nav-link.active {
+  background-color: #2A2B38;
+  color: #FFEBA7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.logo img {
+height: 150px;
+width: auto;
+display: block;
+}
+
 .calendar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  #calendar {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-  }
-  
-  .calendar-cell {
-    border: 1px solid #ccc;
-    padding: 10px;
-    height: 120px;
-    background-color: #2A2B38; 
-    color: #fff;
-  }
-  
-  .current-day {
-    background-color: #FFEBA7;
-    color: #2A2B38;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .add-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #FFEBA7;
-    border-radius: 20%;
-    font-size: 20px;
-    font-weight: 600;
-  }
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
 
-  .form-container {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #FFEBA7;
-    padding: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-  }
+.calendar-cell {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 100px;
+  background-color: #2A2B38; 
+  color: #fff;
+}
+
+.current-day {
+  background-color: #FFEBA7;
+  color: #2A2B38;
+}
+
+.add-appointment {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.add-button {
+  position: absolute;
+  /* top: 0;
+  right: 0; */
+  background-color: #FFEBA7;
+  /* border-radius: 50%; */
+  font-size: 24px;
+  font-weight: 800;
+  padding: 5px;
+  color: #2A2B38;
+}
+
+.form-container {
+  display: none;
+  position: absolute;
+  /* top: -200px; */
+  /* right: 0; */
+  /* width: 200px; */
+  background-color: #FFEBA7;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}

@@ -24,10 +24,9 @@
       <div class="col-md-2">
         <div class="vertical-nav">
           <nav class="nav nav-pills flex-column">
-            <a class="nav-link active" href="#">Appointments</a>
-            <a class="nav-link" href="#">Patients</a>
-            <a class="nav-link" href="#">Doctors</a>
-            <a class="nav-link" href="#">Receptionists</a>
+            <a class="nav-link active" href="dashboard.php">Appointments</a>
+            <a class="nav-link" href="patients.php">Patients</a>
+            <a class="nav-link" href="doctors.php">Doctors</a>
           </nav>
           <div class="logo">
             <img src="Img/61ae-mRACmL._SL1500_-PhotoRoom 2.png" alt="logo">
@@ -36,19 +35,21 @@
       </div>
       <div class="col-md-10">
           <h1>Appointments</h1>
-        <div class="calendar">
-          <div id="calendar"></div>
-        </div>
         <div class="add-appointment">
           <button class="add-button" onclick="toggleForm()">+</button>
           <div id="form-container" class="form-container">
             <form action="process.php" method="POST">
-              <input type="text" name="title" placeholder="Title">
+              <input type="text" name="patient" placeholder="Patient">
+              <input type="text" name="doctor" placeholder="Doctor">
               <input type="text" name="date" placeholder="Date">
               <input type="text" name="time" placeholder="Time">
               <input type="submit" value="Submit">
             </form>
           </div>
+        </div>
+        <div class="calendar">
+          <h2 id="calendar-title"></h2>
+          <div id="calendar"></div>
         </div>
         <script src="calendar.js"></script>
       </div>
