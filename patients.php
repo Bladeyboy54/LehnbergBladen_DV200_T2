@@ -35,6 +35,24 @@
       </div>
       <div class="col-md-10">
           <h1>Patients</h1>
+          <table class="patient-table">
+            <thead>
+                <tr>
+                    <th>Profile Img</th>
+                    <th>Patient ID</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Phone No.</th>
+                    <th>Medical Aid No.</th>
+                </tr>
+            </thead>
+            <tbody>
+              <?php include 'read-patient.php'; ?>
+            </tbody>
+          </table>
       </div>
     </div>
   </div>
