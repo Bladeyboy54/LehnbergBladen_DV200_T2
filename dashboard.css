@@ -136,10 +136,63 @@ thead{
 
 tbody tr td {
   vertical-align: middle;
+  background-color: #2A2B38;
 }
 
 .profile-image {
   height: 80px;
   width: 80px;
   border-radius: 50%;
+}
+
+.card-form {
+  margin: 20px;
+  padding: 20px;
+  background-color: #2A2B38;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-form .form-group {
+  margin-bottom: 15px;
+  
+}
+
+.card-form.show {
+  display: block;
+}
+
+.card-form label {
+  display: block;
+  font-weight: bold;
+  color: #FFEBA7;
+}
+
+.card-form input[type="text"],
+.card-form input[type="number"],
+.card-form input[type="email"] {
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #FFEBA7;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #FFEBA7;
+  background-color: #2A2B38;
+}
+.form-body, 
+.card-body{
+  background-color: #2A2B38;
+}
+.card-form button {
+  padding: 10px 20px;
+  background-color: #FFEBA7;
+  border: none;
+  color: #2A2B38;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-form button:hover {
+  background-color: #ffc500;
 }
