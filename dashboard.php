@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="col-md-10">
-          <h1>Appointments</h1>
+          <h1>APPOINTMENTS</h1>
         <div class="add-appointment">
           <button class="add-button" onclick="toggleForm()">+</button>
           <div id="form-container" class="form-container">

@@ -34,11 +34,11 @@
         </div>
       </div>
       <div class="col-md-10">
-          <h1>Patients</h1>
-          <table class="patient-table">
-            <thead>
-                <tr>
-                    <th>Profile Img</th>
+          <h1>PATIENTS</h1>
+          <table class="table patient-table col-md-12 table-dark">
+            <thead class="thead table-head">
+                <tr class="justify-content-between">
+                    <th>Profile Image</th>
                     <th>Patient ID</th>
                     <th>Name</th>
                     <th>Surname</th>

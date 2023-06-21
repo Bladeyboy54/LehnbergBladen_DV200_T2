@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="col-md-10">
-          <h1>Doctors</h1>
+          <h1>DOCTORS</h1>
       </div>
     </div>
   </div>
