@@ -123,16 +123,23 @@ display: block;
 }
 
 table{
-  margin-top: 20px;
+  margin-top: 40px;
   max-width: 1200px;
   color: #FFEBA7;
-  border-radius: 20px;
 }
 
 thead{
   height: 20px;
   color: #2A2B38;
   background-color: #FFEBA7;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+}
+
+tbody tr td {
+  vertical-align: middle;
+}
+
+.profile-image {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
 }

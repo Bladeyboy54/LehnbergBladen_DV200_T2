@@ -11,7 +11,7 @@ if (!$result) {
 
 while ($row = mysqli_fetch_assoc($result)) {
     echo '<tr>';
-    echo '<td><img src="' . $row['profile_img'] . '" alt="Profile Image"></td>';
+    echo '<td><img src="' . $row['profile_img'] . '" alt="Profile Image" class="profile-image"></td>';
     echo '<td>' . $row['patient_id'] . '</td>';
     echo '<td>' . $row['name'] . '</td>';
     echo '<td>' . $row['surname'] . '</td>';
