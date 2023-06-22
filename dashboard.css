@@ -170,7 +170,8 @@ tbody tr td {
 
 .card-form input[type="text"],
 .card-form input[type="number"],
-.card-form input[type="email"] {
+.card-form input[type="email"],
+.card-form input[type="password"] {
   width: 50%;
   padding: 10px;
   margin: 10px;
@@ -195,4 +196,15 @@ tbody tr td {
 
 .card-form button:hover {
   background-color: #ffc500;
+}
+
+.password {
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #FFEBA7;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #FFEBA7;
+  background-color: #2A2B38;
 }
