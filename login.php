@@ -1,48 +1,54 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 session_start();
 
 include 'db.php';
 
+if (isset($_POST['email']) && isset($_POST['email'])) {
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+  function validate($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+  $email = validate($_POST['email']);
+  $pass = validate($_POST['password']);
 
-  // Perform input validation and login process
+  if (empty($email)) {
+    header("location: index.php?error=! User Name is Required");
+    exit();
 
-  $sql = "SELECT email, Password FROM receptionist WHERE Email = ?";
-  $stmt = $conn->prepare($sql);
-  $stmt->bind_param("s", $email);
-  $stmt->execute();
-  $result = $stmt->get_result();
+  }else if(empty($pass)) {
+    header("location: index.php?error=! Password is Required");
+    exit();
+    
+  }else{
+    $sql = "SELECT * FROM receptionist where email='$email' AND password='$pass'";
 
-  if ($result->num_rows == 1) {
-    $row = $result->fetch_assoc();
-    $storedPassword = $row['password'];
+    $result = mysqli_query($conn, $sql);
 
-    if (password_verify($password, $storedPassword)) {
-      // Password is correct, set up user session
-      $_SESSION['user_id'] = $row['id'];
-      $_SESSION['email'] = $row['email'];
+    if (mysqli_num_rows($result) === 1) {
+      $row = mysqli_fetch_assoc($result);
+      if ($row['email'] === $email && $row['password'] === $pass) {
+        $_SESSION['email'] = $row['email'];
+        $_SESSION['name'] = $row['name'];
+        $_SESSION['rank'] = $row['rank'];
+        header("location: dashboard.php");
+        exit();
+      }else{
+        header("location: index.php?error=! Incorrect email or password");
+        exit();
+      }  
 
-      // Redirect to the dashboard or another page
-      header("Location: dashboard.php");
-      exit;
-    } else {
-      // Invalid password
-      echo "Invalid password!";
+    }else{
+      header("location: index.php?error=! Incorrect email or password");
+      exit();
     }
-  } else {
-    // Invalid email
-    echo "Invalid email!";
   }
 
-  $stmt->close();
+}else{
+  header("location: index.php");
+  exit();
 }
-
-$conn->close();
-
 ?>

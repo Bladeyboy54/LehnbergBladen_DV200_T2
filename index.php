@@ -22,7 +22,6 @@
 
   <body>
     <div class="container">
-      <form>
       <a href="https://front.codes/" class="logo" target="_blank">
 		    <img src="Img/61ae-mRACmL._SL1500_-PhotoRoom 2.png" alt="">
 	    </a>
@@ -41,12 +40,15 @@
                           <div class="center-wrap">
                             <div class="section text-center">
                               <h4 class="mb-4 pb-3">Log In</h4>
+                              <?php if(isset($_GET['error'])) { ?>
+                                <p class="error"><?php echo $_GET['error']; ?></p>
+                              <?php } ?>
                               <div class="form-group">
-                                <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                <input type="email" name="email" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
                                 <i class="input-icon uil uil-at"></i>
                               </div>	
                               <div class="form-group mt-2">
-                                <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                                <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
                                 <i class="input-icon uil uil-lock-alt"></i>
                               </div>
                               <button type="submit" class="btn btn-primary mt-4">Submit</button>
@@ -55,7 +57,7 @@
                           </div>
                         </form>
                       </div>
-                      <div class="card-back">
+                      <!-- <div class="card-back">
                         <form class="front-reg" action="signup.php" method="POST">
                           <div class="center-wrap">
                             <div class="section text-center">
@@ -75,7 +77,8 @@
                               <button type="submit" class="btn btn-primary mt-4">Submit</button>
                             </div>
                           </div>
-                      </div>
+                        </form>  
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -83,7 +86,6 @@
             </div>
           </div>
         </div>
-      </form>
     </div>
   </body>
 

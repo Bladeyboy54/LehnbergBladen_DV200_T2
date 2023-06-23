@@ -1,3 +1,11 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['name']) && isset($_SESSION['email'])) {
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +32,11 @@
       <div class="col-md-2">
         <div class="vertical-nav">
           <nav class="nav nav-pills flex-column">
+            <a class=nav-link>Hello, <?php echo $_SESSION['name']; ?></a>
             <a class="nav-link active" href="dashboard.php">Appointments</a>
             <a class="nav-link" href="patients.php">Patients</a>
             <a class="nav-link" href="doctors.php">Doctors</a>
-            <button type="submit" class="btn button btn-primary">Log Off</button>
+            <a class="nav-link" href="logout.php"><button type="submit" class="btn button btn-primary">Log Off</button></a>
           </nav>
           <div class="logo">
             <img src="Img/61ae-mRACmL._SL1500_-PhotoRoom 2.png" alt="logo">
@@ -83,3 +92,10 @@
   </script> -->
 </body>
 </html>
+
+<?php
+}else{
+  header("location: index.php");
+  exit();
+}
+?>
