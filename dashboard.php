@@ -32,7 +32,7 @@ if (isset($_SESSION['name']) && isset($_SESSION['email'])) {
       <div class="col-md-2">
         <div class="vertical-nav">
           <nav class="nav nav-pills flex-column">
-            <a class=nav-link>Hello, <?php echo $_SESSION['name']; ?></a>
+            <a class="nav-link">Hello, <?php echo $_SESSION['name']; ?></a>
             <a class="nav-link active" href="dashboard.php">Appointments</a>
             <a class="nav-link" href="patients.php">Patients</a>
             <a class="nav-link" href="doctors.php">Doctors</a>

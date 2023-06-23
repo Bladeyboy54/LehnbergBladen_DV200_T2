@@ -5,8 +5,8 @@
 
     include 'db.php';
 
-    $doctor_id = $_POST['doctor_id'];
     $profile_img = $_POST['profile_img'];
+    $doctor_id = $_POST['doctor_id'];
     $name = $_POST['name'];
     $surname = $_POST['surname'];
     $age = $_POST['age'];

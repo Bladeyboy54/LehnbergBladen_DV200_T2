@@ -1,20 +1,18 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
+ini_set('error_reporting', E_ALL & ~E_WARNING);
 
     include 'db.php';
 
     $sql = "SELECT * FROM doctors";
     $result = $conn->query($sql);
-    $doctorId = isset($_GET['doctor_id']) ? (int)$_GET['doctor_id'] : 0;
 
     while ($row = $result->fetch_assoc()) {  
-        echo '<tr>';
-        if ($row['doctor_id'] === $doctorId) {
+        echo "<tr>";
+        if ($row['doctor_id'] === $_GET['doctor_id']) {
             echo '<form class="form-inline m-2" action="doctor-update.php" method="POST">';
             echo '<td><input type="text" class="form-control" name="profile_img" value="'.$row['profile_img'].'"></td>';
+            echo '<td></td>';
             echo '<td><input type="text" class="form-control" name="name" value="'.$row['name'].'"></td>';
             echo '<td><input type="text" class="form-control" name="surname" value="'.$row['surname'].'"></td>';
             echo '<td><input type="number" class="form-control" name="age" value="'.$row['age'].'"></td>';
@@ -42,7 +40,7 @@ ini_set('display_errors', 1);
             echo '<td><a class="btn btn-primary" href="doctors.php?doctor_id=' . $row['doctor_id'] . '" role="button">Update</a></td>'; 
         }
         echo '<td><a class="btn btn-danger" href="doctor-delete.php?doctor_id=' . $row['doctor_id'] . '" role="button">Delete</a></td>';
-        echo '</tr>';
+        echo "</tr>";
     }
 
     $conn->close();
