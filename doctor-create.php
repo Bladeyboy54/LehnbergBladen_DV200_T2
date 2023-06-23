@@ -10,8 +10,9 @@
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $specialization = $_POST['specialization'];
+    $room = $_POST['room'];
 
-    $sql = "INSERT INTO doctors (profile_img, name, surname, age, gender, email, password, phone, specialization) VALUES ('$profile_img', '$name', '$surname', '$age', '$gender', '$email', '$password', '$phone', '$specialization')";
+    $sql = "INSERT INTO doctors (profile_img, name, surname, age, gender, email, password, phone, specialization, room) VALUES ('$profile_img', '$name', '$surname', '$age', '$gender', '$email', '$password', '$phone', '$specialization', '$room')";
 
     $conn->query($sql);
     $conn->close();

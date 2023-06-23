@@ -16,7 +16,7 @@
   <link rel="stylesheet"
         href="dashboard.css">
 
-  <title>Document</title>
+  <title>Doctors</title>
 </head>
 <body>
   <div class="container-fluid">
@@ -47,6 +47,7 @@
                     <th>Email</th>
                     <th>Phone No.</th>
                     <th>Specialization</th>
+                    <th>Room</th>
                     <th>Update</th>
                     <th>Delete</th>
                 </tr>
@@ -91,8 +92,12 @@
                   <input type="text" class="form-control" id="phone" name="phone">
                 </div>
                 <div class="form-group">
-                  <label for="medical_aid_no">Specialization:</label>
+                  <label for="specialization">Specialization:</label>
                   <input type="text" class="form-control" id="specialization" name="specialization">
+                </div>
+                <div class="form-group">
+                  <label for="room">room:</label>
+                  <input type="text" class="form-control" id="room" name="room">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Create</button>

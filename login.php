@@ -6,13 +6,14 @@ session_start();
 
 include 'db.php';
 
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $email = $_POST['email'];
   $password = $_POST['password'];
 
   // Perform input validation and login process
 
-  $sql = "SELECT id, email, password FROM receptionist WHERE email = ?";
+  $sql = "SELECT email, Password FROM receptionist WHERE Email = ?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("s", $email);
   $stmt->execute();

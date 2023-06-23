@@ -15,7 +15,7 @@
   <link rel="stylesheet"
         href="dashboard.css">
 
-  <title>Document</title>
+  <title>Patients</title>
 </head>
 <body>
   <div class="container-fluid">

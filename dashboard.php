@@ -16,7 +16,7 @@
   <link rel="stylesheet"
         href="dashboard.css">
 
-  <title>Document</title>
+  <title>Dashboard</title>
 </head>
 <body>
   <div class="container-fluid">
@@ -27,6 +27,7 @@
             <a class="nav-link active" href="dashboard.php">Appointments</a>
             <a class="nav-link" href="patients.php">Patients</a>
             <a class="nav-link" href="doctors.php">Doctors</a>
+            <button type="submit" class="btn button btn-primary">Log Off</button>
           </nav>
           <div class="logo">
             <img src="Img/61ae-mRACmL._SL1500_-PhotoRoom 2.png" alt="logo">
@@ -35,31 +36,50 @@
       </div>
       <div class="col-md-10">
           <h1>APPOINTMENTS</h1>
-        <div class="add-appointment">
-          <button class="add-button" onclick="toggleForm()">+</button>
-          <div id="form-container" class="form-container">
-            <form action="process.php" method="POST">
-              <input type="text" name="patient" placeholder="Patient">
-              <input type="text" name="doctor" placeholder="Doctor">
-              <input type="text" name="date" placeholder="Date">
-              <input type="text" name="time" placeholder="Time">
-              <input type="submit" value="Submit">
-            </form>
+        
+        <div id="form-container" class="form-container">
+          <form action="appointment-create.php" method="POST">
+            <input type="text" name="appointment_id" id="appointment_id" placeholder="Appointment">
+            <input type="text" name="patient_id" id="patient_id" placeholder="Patient">
+            <input type="text" name="doctor_id" id="doctor_id" placeholder="Doctor">
+            <input type="text" name="appointment_time" id="appointment_time" placeholder="Time">
+            <input type="text" name="room" id="room" placeholder="Room No.">
+            <input type="submit" class="button btn-primary" value="Submit">
+          </form>
+        </div>
+        <br>
+        <div class="calendar">
+          <h2 id="calendar-title">
+            This week
+          </h2>
+          <div id="calendar">
+            <table class="table appointment-table col-md-12 table-dark">
+              <thead class="thead table-head">
+                <tr class="justify-content-between">
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                  <th>Sunday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php include 'calendar-read.php'; ?>
+              </tbody>
+            </table>
           </div>
         </div>
-        <div class="calendar">
-          <h2 id="calendar-title"></h2>
-          <div id="calendar"></div>
-        </div>
-        <script src="calendar.js"></script>
+        <!-- <script src="calendar.js"></script> -->
       </div>
     </div>
   </div>
-  <script>
+  <!-- <script>
     function toggleForm() {
       var formContainer = document.getElementById('form-container');
       formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
     }
-  </script>
+  </script> -->
 </body>
 </html>

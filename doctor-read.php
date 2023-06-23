@@ -23,6 +23,7 @@ ini_set('display_errors', 1);
             echo '<td><input type="password" class="form-control password" name="password" value="'.$row['password'].'"></td>';
             echo '<td><input type="text" class="form-control" name="phone" value="'.$row['phone'].'"></td>';
             echo '<td><input type="text" class="form-control" name="specialization" value="'.$row['specialization'].'"></td>';
+            echo '<td><input type="text" class="form-control" name="room" value="'.$row['room'].'"></td>';
             echo '<td><button type="submit" class="btn btn-primary">Save</button></td>';
             echo '<input type="hidden" name="doctor_id" value="'.$row['doctor_id'].'">';
             echo '</form>';
@@ -37,6 +38,7 @@ ini_set('display_errors', 1);
             // echo '<td>' . $row['password'] . '</td>';
             echo '<td>' . $row['phone'] . '</td>';
             echo '<td>' . $row['specialization'] . '</td>';
+            echo '<td>' . $row['room'] . '</td>';
             echo '<td><a class="btn btn-primary" href="doctors.php?doctor_id=' . $row['doctor_id'] . '" role="button">Update</a></td>'; 
         }
         echo '<td><a class="btn btn-danger" href="doctor-delete.php?doctor_id=' . $row['doctor_id'] . '" role="button">Delete</a></td>';
