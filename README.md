@@ -7,7 +7,7 @@
 <p align="center">
 
   <a href="https://github.com/Bladeyboy54/LehnbergBladen_DV200_T2">
-    <img src="Img\61ae-mRACmL._SL1500_-PhotoRoom 2.png" alt="Logo" width="auto" height="200px">
+    <img src="Img\group.png" alt="Logo" width="auto" height="200px">
   </a>
   
   <h3 align="center">Evergreen Medical Center </h3>
